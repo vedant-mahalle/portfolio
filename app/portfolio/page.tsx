@@ -27,12 +27,12 @@ const projects = [
     liveUrl: "https://vithai-enterprises.vercel.app/",
   },
   {
-    title: "Weather Dashboard",
+    title: "Web Chess-Platform",
     description: "Real-time weather application with location search, 5-day forecast, and interactive weather maps.",
     image: "https://placehold.co/600x400/2563eb/ffffff?text=Weather+Dashboard",
     tags: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/vedantmahalle21/weather-dashboard",
-    liveUrl: "https://weather-dashboard-demo.com",
+    githubUrl: "https://github.com/vedant-mahalle/web-chess",
+    // liveUrl: "https://weather-dashboard-demo.com",
   },
   {
     title: "E-Commerce Platform",
