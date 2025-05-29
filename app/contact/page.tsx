@@ -70,9 +70,15 @@ export default function ContactPage() {
     e.preventDefault()
 
     if (!validateForm()) {
-      // Shake animation for form errors
+      // Shake animation for form errors using keyframes
       gsap.to(formRef.current, {
-        x: [-10, 10, -10, 10, 0],
+        keyframes: [
+          { x: -10 },
+          { x: 10 },
+          { x: -10 },
+          { x: 10 },
+          { x: 0 }
+        ],
         duration: 0.5,
         ease: "power2.inOut",
       })
@@ -121,17 +127,20 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Location",
-      details: "New York, NY 10001, United States",
+      details: "Pune, India",
+      href: undefined
     },
     {
       icon: Mail,
       title: "Email",
-      details: "vedant@example.com",
+      details: "vedantmahalle39@gmail.com",
+      href: "mailto:vedantmahalle39@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+91 9730665390",
+      href: "tel:+919730665390"
     },
   ]
 
@@ -161,7 +170,16 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
-                  <p className="text-gray-500 dark:text-gray-400">{info.details}</p>
+                  {info.href ? (
+                    <a 
+                      href={info.href}
+                      className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                    >
+                      {info.details}
+                    </a>
+                  ) : (
+                    <p className="text-gray-500 dark:text-gray-400">{info.details}</p>
+                  )}
                 </div>
               </motion.div>
             </AnimatedSection>

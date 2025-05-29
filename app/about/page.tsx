@@ -1,12 +1,19 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Download, Mail } from "lucide-react"
+import { Download, Mail, Phone, MapPin, User } from "lucide-react"
 import AnimatedPage from "@/components/animated-page"
 import AnimatedSection from "@/components/animated-section"
 import TiltCard from "@/components/tilt-card"
 
 export default function AboutPage() {
+  const handleDownloadCV = () => {
+    // The file will be served from the public directory
+    window.open('/documents/vedant-mahalle-cv.pdf', '_blank')
+  }
+
   return (
     <AnimatedPage className="p-10">
       <h1 className="text-3xl font-bold mb-8 border-b border-gray-200 dark:border-gray-800 pb-4">About Me</h1>
@@ -24,39 +31,68 @@ export default function AboutPage() {
               that not only look great but also perform well.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-white/30 dark:bg-[#1a1a1a]/80 backdrop-blur-lg p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-                <h3 className="font-medium mb-2">Name:</h3>
-                <p className="text-gray-500 dark:text-gray-400">Vedant Mahalle</p>
+                <h3 className="font-medium mb-2 flex items-center gap-2">
+                  <span className="text-blue-500"><User className="w-4 h-4" /></span>
+                  Name:
+                </h3>
+                <p
+                  className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  Vedant Mahalle
+                </p>
               </div>
               <div className="bg-white/30 dark:bg-[#1a1a1a]/80 backdrop-blur-lg p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-                <h3 className="font-medium mb-2">Email:</h3>
-                <p className="text-gray-500 dark:text-gray-400">vedant@example.com</p>
+                <h3 className="font-medium mb-2 flex items-center gap-2">
+                  <span className="text-blue-500"><Mail className="w-4 h-4" /></span>
+                  Email:
+                </h3>
+                <a
+                  href="mailto:vedantmahalle39@gmail.com"
+                  className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  vedantmahalle39@gmail.com
+                </a>
               </div>
               <div className="bg-white/30 dark:bg-[#1a1a1a]/80 backdrop-blur-lg p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-                <h3 className="font-medium mb-2">Phone:</h3>
-                <p className="text-gray-500 dark:text-gray-400">+1 (555) 123-4567</p>
+                <h3 className="font-medium mb-2 flex items-center gap-2">
+                  <span className="text-blue-500"><Phone className="w-4 h-4" /></span>
+                  Phone:
+                </h3>
+                <a
+                  href="tel:+919730665390"
+                  className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  +91 9730665390
+                </a>
               </div>
               <div className="bg-white/30 dark:bg-[#1a1a1a]/80 backdrop-blur-lg p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-                <h3 className="font-medium mb-2">Location:</h3>
-                <p className="text-gray-500 dark:text-gray-400">New York, USA</p>
+                <h3 className="font-medium mb-2 flex items-center gap-2">
+                  <span className="text-blue-500"><MapPin className="w-4 h-4" /></span>
+                  Location:
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">Pune, India</p>
               </div>
             </div>
 
             <div className="flex gap-4 pt-4">
-              <Button className="bg-blue-500 hover:bg-blue-600 rounded-full px-6 flex items-center gap-2 relative overflow-hidden group">
-                <span className="relative z-10">
-                  <Download size={16} />
+              <Button
+                onClick={handleDownloadCV}
+                className="bg-blue-500 hover:bg-blue-600 rounded-full px-6 flex items-center gap-2 relative overflow-hidden group"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <Download className="w-4 h-4" />
                   Download CV
                 </span>
-                <span className="absolute inset-0 bg-white opacity-20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
+                <span className="absolute inset-0 bg-white/20 dark:bg-blue-400/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
               </Button>
-              <Link href="/contact">
+              <Link href="mailto:vedantmahalle39@gmail.com">
                 <Button
                   variant="outline"
                   className="rounded-full px-6 border-blue-500 text-blue-500 hover:bg-blue-500/10 flex items-center gap-2"
                 >
-                  <Mail size={16} />
+                  <Mail className="w-4 h-4" />
                   Contact Me
                 </Button>
               </Link>
@@ -76,7 +112,7 @@ export default function AboutPage() {
               {/* Image */}
               <div className="relative z-10 w-full h-[400px] overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.yTh9dkXH9kyWb3GjISMpJAHaEK%3Fpid%3DApi&f=1&ipt=dabf7d273997549ddad89a6ede0e299db3b2ae2c3443d6e571c45d9bf4419c6f&ipo=images1"
                   alt="Vedant Mahalle"
                   width={400}
                   height={400}
