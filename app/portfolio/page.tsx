@@ -30,9 +30,9 @@ const projects = [
   },
   {
     title: "Movie Stremer",
-    description: "A website for a local business that sells a variety of engine products.",
-    image: "https://placehold.co/600x400/2563eb/ffffff?text=Task+Manager+API",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    description: "A responsive movie streaming platform built with Next.js and integrated with TMDB API for movie data.",
+    image: "https://placehold.co/600x400/2563eb/ffffff?text=Movie+Stremer",
+    tags: ["Next.js", "React", "Tailwind CSS", "TMDB API", "Video.js"],
     githubUrl: "https://github.com/vedant-mahalle/movie-stremer",
     liveUrl: "https://movie-stremer.vercel.app/",
     category: "Web Development",
@@ -66,7 +66,7 @@ const projects = [
     description: "Collection of ML projects including image classification, natural language processing, and predictive analytics.",
     image: "https://placehold.co/600x400/2563eb/ffffff?text=ML+Projects",
     tags: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
-    githubUrl: "https://github.com/vedant-mahalle/foodrecomendation",
+    githubUrl: "https://github.com/vedantmahalle21/ml-projects",
     category: "Machine Learning",
   }
 ]
