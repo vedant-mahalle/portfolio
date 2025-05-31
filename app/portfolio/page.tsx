@@ -29,6 +29,15 @@ const projects = [
     category: "Web Development",
   },
   {
+    title: "Movie Stremer",
+    description: "A website for a local business that sells a variety of engine products.",
+    image: "https://placehold.co/600x400/2563eb/ffffff?text=Task+Manager+API",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    githubUrl: "https://github.com/vedant-mahalle/movie-stremer",
+    liveUrl: "https://movie-stremer.vercel.app/",
+    category: "Web Development",
+  },
+  {
     title: "Food Recommendation System",
     description: "An intelligent system that recommends personalized meal plans based on BMI calculations and nutritional requirements. Built with Flask and machine learning algorithms.",
     image: "https://placehold.co/600x400/2563eb/ffffff?text=Food+Recommendation",
